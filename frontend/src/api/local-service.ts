@@ -39,6 +39,10 @@ export function runAction(key: string, id: number, action: string): ActionResult
   if (index < 0) {
     return { ok: false, message: `没有找到编号为 ${id} 的${meta.entity}` }
   }
+  // 不合格品台账托管的偏差待办（DEVI-NCR-*）只能在处置单流程里推进，各入口结论同源。
+  if (key === 'deviation' && Number(rows[index].id) >= 900000) {
+    return { ok: false, message: `该待办由不合格品处置单 ${rows[index]['偏差编号']} 自动同步，请到「不合格品与返工返修台账」办理，结论以处置单为准` }
+  }
   const current = String(rows[index].status)
   if (current === target) {
     return { ok: false, message: `${meta.entity}已经是「${target}」，不用重复操作` }

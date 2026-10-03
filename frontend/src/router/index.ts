@@ -5,6 +5,7 @@ const Batchrecord = () => import('@/views/batchrecord/index.vue')
 const Cleanroom = () => import('@/views/cleanroom/index.vue')
 const Materialrelease = () => import('@/views/materialrelease/index.vue')
 const Deviation = () => import('@/views/deviation/index.vue')
+const Nonconforming = () => import('@/views/nonconforming/index.vue')
 const Changecontrol = () => import('@/views/changecontrol/index.vue')
 const Cleanvalidate = () => import('@/views/cleanvalidate/index.vue')
 const Sterilize = () => import('@/views/sterilize/index.vue')
@@ -28,6 +29,7 @@ const router = createRouter({
     { path: '/cleanroom', name: 'cleanroom', component: Cleanroom },
     { path: '/materialrelease', name: 'materialrelease', component: Materialrelease },
     { path: '/deviation', name: 'deviation', component: Deviation },
+    { path: '/nonconforming', name: 'nonconforming', component: Nonconforming },
     { path: '/changecontrol', name: 'changecontrol', component: Changecontrol },
     { path: '/cleanvalidate', name: 'cleanvalidate', component: Cleanvalidate },
     { path: '/sterilize', name: 'sterilize', component: Sterilize },
