@@ -19,6 +19,7 @@ const Supplieraudit = () => import('@/views/supplieraudit/index.vue')
 const Training = () => import('@/views/training/index.vue')
 const Annualreview = () => import('@/views/annualreview/index.vue')
 const Complaint = () => import('@/views/complaint/index.vue')
+const Nonconforming = () => import('@/views/nonconforming/index.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -42,6 +43,7 @@ const router = createRouter({
     { path: '/training', name: 'training', component: Training },
     { path: '/annualreview', name: 'annualreview', component: Annualreview },
     { path: '/complaint', name: 'complaint', component: Complaint },
+    { path: '/nonconforming', name: 'nonconforming', component: Nonconforming },
   ],
 })
 
